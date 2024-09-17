@@ -1,0 +1,13 @@
+body {
+  overflow-x: hidden;
+}
+#app {
+  padding: 10rem 0;
+  background-color: #ffffff;
+  color: #000;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
