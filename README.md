@@ -1,8 +1,16 @@
-# React + Vite
+# AERO Create Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+_automatic-swiper_ this is two automatic swipers in React, one implemented on changing the attribute of elements, the other on moving an element in the DOM tree.
 
-Currently, two official plugins are available:
+## 📦 Technologies
+- `Java Script`
+- `React`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏃‍♂️ Running the Project
+1. Clone the repository to your local machine.
+2. Run `npm install` or `yarn` in the project directory to install the required dependencies.
+3. Run `npm run dev` or `yarn dev` to get the project started.
+
+## 😍 Preview
+![preview](public/preview.png)
+![preview](public/preview.gif)
