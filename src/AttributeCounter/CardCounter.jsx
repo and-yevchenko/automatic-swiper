@@ -1,26 +1,29 @@
-import { useEffect, useState } from "react"
-import './CardCounter.css'
-
+import { useEffect, useState } from 'react';
+import './CardCounter.css';
 
 export const CardCounter = ({ card, index, CARDS }) => {
+  const [number, setNumber] = useState(index);
 
-    const [number, setNumber] = useState(index)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNumber(number === CARDS.length ? 1 : number + 1);
+    }, 5000);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setNumber(number === CARDS.length ? 1 : number + 1)
-        }, 5000)
-    
-        return () => clearInterval(interval)
-    }, [number])
+    return () => clearInterval(interval);
+  }, [number]);
 
-    return (
-        <div className='attribute-counter__card card-counter' data-position={number}>
-            <div className='card-counter__photo'><img src={card.photo} alt="client" /></div>
-            <div className='card-counter__info'>
-                <span className='card-counter__name'>{card.name}</span>
-                <span className='card-counter__text'>{card.text}</span>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div
+      className="attribute-counter__card card-counter"
+      data-position={number}
+    >
+      <div className="card-counter__photo">
+        <img src={card.photo} alt="client" />
+      </div>
+      <div className="card-counter__info">
+        <span className="card-counter__name">{card.name}</span>
+        <span className="card-counter__text">{card.text}</span>
+      </div>
+    </div>
+  );
+};
