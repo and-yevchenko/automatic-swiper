@@ -2,13 +2,13 @@ import { useEffect, useState } from "react"
 import './CardCounter.css'
 
 
-export const CardCounter = ({ card, index }) => {
+export const CardCounter = ({ card, index, CARDS }) => {
 
     const [number, setNumber] = useState(index)
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setNumber(number === 7 ? 1 : number + 1)
+            setNumber(number === CARDS.length ? 1 : number + 1)
         }, 5000)
     
         return () => clearInterval(interval)

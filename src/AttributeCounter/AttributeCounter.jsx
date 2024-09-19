@@ -13,7 +13,7 @@ export const AttributeCounter = () => {
                 <div className='attribute-counter__text'><h3>Attribute Counter</h3></div>
                 <div className='attribute-counter__clients'>
                     {CARDS.map((card, index) => (
-                        <CardCounter key={card.id} card={card} index={index + 1}/>
+                        <CardCounter key={card.id} card={card} index={index + 1} CARDS={CARDS}/>
                     ))}
                 </div>
             </article>
